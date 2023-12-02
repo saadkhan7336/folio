@@ -1,0 +1,167 @@
+.about {
+    overflow: hidden;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-container .left>p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.about-container .left .title {
+    text-align: start;
+    margin-bottom: 2rem;
+}
+
+.about-container .title h2 {
+    font-size: 2rem;
+}
+
+.about-container .tech-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tech-container .card {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem .7rem;
+    background: var(--color-primary);
+    color: var(--color-text-2);
+    border: .1rem solid #eee;
+    box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+    border-radius: .5rem;
+}
+
+.tech-container .card h4 {
+    color: var(--color-secondary);
+    font-size: 1.9rem;
+}
+
+.tech-container .card:nth-child(2) {
+    background: #f8bb38;
+}
+
+.tech-container .card:nth-child(3) {
+    background: rgb(236, 62, 97);
+}
+
+.tech-container .card:nth-child(4) {
+    background: #7373b2;
+}
+.tech-container .card:hover{
+    transform: translateY(-.1rem);
+}
+.about-container .right{
+    box-shadow: 0 8px 30px rgba(153,153,153,.1);
+    padding: 2rem;
+}
+.tools-container .tool{
+    margin: 2.3rem 0;
+    position: relative;
+}
+.tools-container .tool p{
+    text-align: right;
+}
+.tools-container .tool span::before{
+    position: absolute;
+    content: "";
+    top: 1.5rem;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    border: .1rem solid #eee;
+    border-radius: 2rem;
+}
+.tools-container .tool span::after{
+    position: absolute;
+    content: "";
+    top: 1.65rem;
+    left: 0;right: 0;
+    height: .7rem;
+    width: 90%;
+    background: var(--color-primary);
+    border: .1rem solid #eee;
+    border-radius: 2rem;
+    margin-left: .1rem;
+    animation: HTML 1s;
+}
+.tools-container .tool:nth-child(2) span::after{
+    width: 80%;
+    animation:Css 2s;
+}
+.tools-container .tool:nth-child(3) span::after{
+    width: 70%;
+    animation: java 3s;
+}
+.tools-container .tool:nth-child(4) span::after{
+    width: 80%;
+    animation: React 4s;
+}
+.tools-container .tool:nth-child(5) span::after{
+    width: 90%;
+    animation: Boot 4s;
+}
+.tools-container .tool:nth-child(6) span::after{
+    width: 75%;
+    animation: Git 4s;
+}
+
+@keyframes HTML{
+    0%{
+        width: 0;
+    }
+}
+@keyframes Css{
+    0%{
+        width: 0;
+    }
+}
+@keyframes java{
+    0%{
+        width: 0;
+    }
+}
+@keyframes React{
+    0%{
+        width: 0;
+    }
+}
+@keyframes Boot{
+    0%{
+        width: 0;
+    }
+}
+@keyframes Git{
+    0%{
+        width: 0;
+    }
+}
+@media(max-width: 1100px){
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+}
+@media(max-width:576px){
+    .about-container .left .title{
+        text-align: center;
+        }
+    .about-container .tech-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top:2rem;
+        padding: 0 .3rem;
+    }
+    .about-container .left>p{
+        text-align: center;
+    }
+    }
